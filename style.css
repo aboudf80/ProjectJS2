@@ -224,7 +224,6 @@ h1 {
 .popup-buttons button:hover {
   opacity: 0.9;
 }
-
 .dark-card {
   background-color: #000000;
   color: #000000;
@@ -232,6 +231,7 @@ h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: 0.3s ease;
 }
+
 /* ----------------------------------------
    Utility: hide elements
 ---------------------------------------- */
@@ -266,13 +266,13 @@ footer {
 /* ----------------------------------------
    Favourite star button
 ---------------------------------------- */
-button.favorite {
+button.favourite {
   font-size: 20px;
   color: gray;
   background: none;
   border: none;
   cursor: pointer;
 }
-button.favorite.active {
+button.favourite.active {
   color: gold;
 }
