@@ -3,48 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple Contact Book</title>
+  <!-- Favicon icon that appears in browser tab -->
+  <link rel="icon" href="icon/phonebook-icon.png" type="image/png" />
+  <title>Phone Book</title>
+  <!-- Link to external CSS file for styling -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="icon/favicon-16x16.png" type="image/png" />
 </head>
 <body>
   <div class="container">
+    <!-- Main page title -->
     <h1>My Phone Book</h1>
 
-    <div class="controls">
+    <!-- Top controls: search, add, clear, toggle effect -->
+    <div id="controls" class="controls">
       <input type="text" id="searchInput" placeholder="Search contacts..." />
       <button id="addBtn">Add Contact</button>
       <button id="clearAllBtn">Clear All</button>
-      <button id="showFavoritesBtn">Show Favorites</button>
-      <button id="showAllBtn">Show All</button>
       <button id="effectBtn">Toggle Effect</button>
-      <button id="nameRedBtn">Red Names</button> 
+      <button id="showFavouritesBtn">Show Favourites</button>
+      <button id="showAllBtn">Show All</button>
+      <button id="redNamesBtn">Red Names</button>
       <button id="phoneBoldBtn">Bold Phones</button> 
       <button id="btnHideUnder30">Hide Age smaller than 30</button>
       <button id="btnResetHidden">Reset Hide</button>
       <button id="nameBoldBtn">Bold Names</button>
       <button id="btnClearImages">Clear Images</button>
-        <button id="btnDarkCardToggle">Dark Card Toggle</button>
+      <button id="btnDarkCardToggle">Dark Card Toggle</button>
+      <button id="btnSortByNameAZ">SortByNameAZ</button>
+      <button id="btnSortByAgeDesc">SortByAgeDesc</button>
+      <button id="btnCountFavorites">CountFavorites</button>
+      <button id="btnAverageAge">AverageAge</button>
     </div>
 
-    <p id="contactCounter">Total: 0 contacts</p>
+    <!-- Contact counter display -->
+    <p id="contactCounter">Total: 5 contacts</p>
 
+    <!-- Header row for the list -->
     <ul class="contact-header">
       <li>Image</li>
       <li>Name</li>
       <li>Phone</li>
       <li>Actions</li>
     </ul>
-    <ul id="contactList" class="contact-list"></ul>
+    
+    <!-- Contact list: populated and updated by JavaScript -->
+    <ul id="contactList" class="contact-list">
+      <!-- Example static items (will be re-rendered) -->
+      <!-- ... -->
+    </ul>
+
+    <!-- Message to show when no contacts are visible -->
     <p id="noContactsMsg" class="hidden">No contacts found.</p>
 
+    <!-- Popup form for adding/editing/viewing contact -->
     <div id="popup" class="popup hidden">
       <form id="popupForm">
         <h2 id="formTitle">Add Contact</h2>
         <input type="text" id="formName" placeholder="Name" required />
         <input type="text" id="formPhone" placeholder="Phone" required />
-        <input type="text" id="formEmail" placeholder="Email" />
         <input type="text" id="formAddress" placeholder="Address" />
+        <input type="email" id="formEmail" placeholder="Email" />
         <input type="number" id="formAge" placeholder="Age" />
         <textarea id="formNotes" placeholder="Notes"></textarea>
         <input type="text" id="formImage" placeholder="Image URL (optional)" />
@@ -55,12 +73,15 @@
       </form>
     </div>
 
-   
-  </div>
-   <footer>
+    <!-- Footer section -->
+ 
+  </div>  
+  <footer>
       <p>&copy; 2025 Ahmad &#9747; Zahra</p>
     </footer>
+   
 
+  <!-- Link to external JavaScript file for interactivity -->
   <script src="js.js"></script>
 </body>
 </html>
